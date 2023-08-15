@@ -1,3 +1,19 @@
-header {
-    color: white;
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.cards {
+    min-height: 30vh;
+    margin: 1rem;
+    background-color: grey;
+    border-radius: 10px;
+    align-items: center;
 }
