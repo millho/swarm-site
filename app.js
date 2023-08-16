@@ -65,6 +65,11 @@ const people = [{
 ]
 
 drawTown()
+// rules()
+
+function rules() {
+    window.alert('TURN ONE BUILDING AT A TIME BEFORE THE TIME RUNS OUT')
+}
 
 function drawTown() {
     locations.forEach((local) => {
@@ -82,6 +87,7 @@ function attack(local) {
     movePeople()
     drawTown()
     checkWin()
+    checkLose()
 }
 
 function checkWin() {
@@ -98,4 +104,14 @@ function movePeople() {
             person.location = locations[randomIndex]
         }
     })
+}
+
+function checkLose() {
+    let hoursLeft = 5
+    if (function.attack(local)) {
+        hoursLeft = - 1
+    }
+    if (hoursLeft == 0) {
+        window.alert('TIME IS UP. YOU LOST')
+    }
 }
