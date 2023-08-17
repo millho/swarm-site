@@ -65,7 +65,7 @@ const people = [{
 ]
 
 drawTown()
-// rules()
+rules()
 
 function rules() {
     window.alert('TURN ONE BUILDING AT A TIME BEFORE THE TIME RUNS OUT')
@@ -108,7 +108,8 @@ function movePeople() {
 
 function checkLose() {
     let hoursLeft = 5
-    if (function.attack(local)) {
+    let bats = people.forEach(person => person.picture == '🦇')
+    if (bats) {
         hoursLeft = - 1
     }
     if (hoursLeft == 0) {
